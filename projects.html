@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huzaifa Jawad - Projects</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      background-color: #0099cc;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 1em;
+    }
+
+    section {
+      padding: 2em;
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: #0066cc;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #projectList {
+      list-style: none;
+      padding: 0;
+    }
+
+    #projectList li {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    #projectFilter {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Huzaifa Jawad - Projects</h1>
+  </header>
+
+  <nav>
+    <a href="website.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="education.html">Education</a>
+  </nav>
+
+  <section id="projects">
+    <h2>Highlighted Projects</h2>
+    <input type="text" id="projectFilter" placeholder="Filter by Technology">
+    <ul id="projectList">
+      <li>
+        <strong>Personalized LLM for Edtech, FYP - FAST</strong><br>
+        Collaborated with "I_Parhai," an Ed-tech company, integrating their databases for user data. Implemented advanced NLP techniques for personalized responses.
+      </li>
+      <li>
+        <strong>Real State Price Prediction</strong><br>
+        Conducted in-depth real estate price prediction, utilizing EDA, statistical methods, and a range of regression models.
+      </li>
+      <li>
+        <strong>Interactive Web Dashboard for Data Visualization</strong><br>
+        Developed an interactive dashboard using React and D3.js to visualize data in real-time, enhancing decision-making processes for a finance analytics firm.
+      </li>
+      <li>
+        <strong>E-commerce Site Optimization</strong><br>
+        Revamped user interface and optimized backend operations for an e-commerce website, using Node.js and MongoDB, resulting in a 50% increase in site performance.
+      </li>
+      <li>
+        <strong>Image Captioning with Deep Learning</strong><br>
+        Designed a system to automatically generate captions for images using CNNs and LSTM networks, improving accessibility for visually impaired users.
+      </li>
+      <li>
+        <strong>AI-based Chatbot for Customer Service</strong><br>
+        Developed a chatbot using TensorFlow and Python that handles customer queries in real-time, significantly reducing response time and improving user satisfaction.
+      </li>
+    </ul>
+    <script>
+      document.getElementById('projectFilter').addEventListener('input', function() {
+        var filter = this.value.toLowerCase();
+        var projects = document.getElementById('projectList').getElementsByTagName('li');
+        for (var i = 0; i < projects.length; i++) {
+          var text = projects[i].innerText.toLowerCase();
+          projects[i].style.display = text.includes(filter) ? 'list-item' : 'none';
+        }
+      });
+    </script>
+  </section>
+
+  <footer>
+    &copy; 2024 Huzaifa Jawad - Data Scientist and ICPC Gold Medalist
+  </footer>
+
+</body>
+
+</html>
